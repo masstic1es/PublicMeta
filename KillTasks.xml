@@ -1,0 +1,106 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="table" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Condition_x0020_Type" type="xs:string" minOccurs="0" />
+                <xs:element name="Action_x0020_Type" type="xs:string" minOccurs="0" />
+                <xs:element name="Condition_x0020_Data" type="xs:string" minOccurs="0" />
+                <xs:element name="Action_x0020_Data" type="xs:string" minOccurs="0" />
+                <xs:element name="State" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <table>
+    <Condition_x0020_Type>Expression</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>isfalse[touchvar[killtasks]]</Condition_x0020_Data>
+    <Action_x0020_Data>ChatCommand{/myquests}</Action_x0020_Data>
+    <State>Default</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Expression{istrue[touchvar[killtasks]]}SecondsInStateGE{2}</Condition_x0020_Data>
+    <Action_x0020_Data>ExpressionAct{setvar[meta,KillTasksAlt]}ExpressionAct{setvar[navigation,TownNetwork]}SetState{FlagCheck}</Action_x0020_Data>
+    <State>Default</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Any{Expression: {getquestktrequired[bloodshrethkills]==getquestktrequired[bloodshrethkillcount]}Expression: {(getquestktprogress[bloodshrethkillcount]&gt;=10)||(getquestktprogress[bloodshrethkills]&gt;=10)}}}Expression{(getqueststatus[bloodshrethkilltask]==1)&amp;&amp;(getqueststatus[bloodshrethtask]==1)}Expression{isfalse[getvar[KillTask\_BloodShreth]]}</Condition_x0020_Data>
+    <Action_x0020_Data>SetState{TaskNavLoop}ExpressionAct{setvar[town,Shoushi]}ExpressionAct{setvar[LandcellA,`-631963619`]}ExpressionAct{setvar[LandcellB,`-631963619`]}ExpressionAct{setvar[NPC,31641]}ExpressionAct{setvar[task, BloodShreth]}</Action_x0020_Data>
+    <State>FlagCheck</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Any{Expression: {getquestktrequired[diremattekarkills]==getquestktrequired[diremattekarkillcount]}Expression: {(getquestktprogress[diremattekarkills]&gt;=10)||(getquestktprogress[diremattekarkillcount]&gt;=10)}}}Expression{(getqueststatus[diremattekarkilltask]==1)&amp;&amp;(getqueststatus[diremattekartask]==1)}Expression{isfalse[getvar[KillTask\_DireMattekar]]}</Condition_x0020_Data>
+    <Action_x0020_Data>SetState{TaskNavLoop}ExpressionAct{setvar[town,Baishi]}ExpressionAct{setvar[LandcellA,`-834600953`]}ExpressionAct{setvar[LandcellB,`-851378146`]}ExpressionAct{setvar[NPC,31652]}ExpressionAct{setvar[task, DireMattekar]}</Action_x0020_Data>
+    <State>FlagCheck</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Any{Expression: {getquestktrequired[platearmoredillokills]==getquestktrequired[platearmoredillokillcount]}Expression: {(getquestktprogress[platearmoredillokills]&gt;=10)||(getquestktprogress[platearmoredillokillcount]&gt;=10)}}}Expression{(getqueststatus[platearmoredillokilltask]==1)&amp;&amp;(getqueststatus[platearmoredillotask]==1)}Expression{isfalse[getvar[KillTask\_PlateArmordillo]]}</Condition_x0020_Data>
+    <Action_x0020_Data>SetState{TaskNavLoop}ExpressionAct{setvar[town,FortTethana]}ExpressionAct{setvar[LandcellA,`645988381`]}ExpressionAct{setvar[LandcellB,`629211180`]}ExpressionAct{setvar[NPC,31643]}ExpressionAct{setvar[task, PlateArmoredillo]}</Action_x0020_Data>
+    <State>FlagCheck</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>Expression</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>getplayerlandcell[]==cnumber[`-631963619`]</Condition_x0020_Data>
+    <Action_x0020_Data>EmbeddedNavRoute{C:\Turbine\Plugins\VirindiPlugins\VirindiTank\KillTasks\Navs\bloodshrethkills.nav}ReturnFromCall{0}</Action_x0020_Data>
+    <State>Navigation</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>Expression</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>getplayerlandcell[]==cnumber[`-834600953`]</Condition_x0020_Data>
+    <Action_x0020_Data>EmbeddedNavRoute{C:\Turbine\Plugins\VirindiPlugins\VirindiTank\KillTasks\Navs\diremattekarkills.nav}ReturnFromCall{0}</Action_x0020_Data>
+    <State>Navigation</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>Expression</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>getplayerlandcell[]==cnumber[`645988381`]</Condition_x0020_Data>
+    <Action_x0020_Data>EmbeddedNavRoute{C:\Turbine\Plugins\VirindiPlugins\VirindiTank\KillTasks\Navs\platearmoredillokills.nav}ReturnFromCall{0}</Action_x0020_Data>
+    <State>Navigation</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>Expression</Condition_x0020_Type>
+    <Action_x0020_Type>ExpressionAct</Action_x0020_Type>
+    <Condition_x0020_Data>getplayerlandcell[]!=cnumber[getvar[LandcellA]]</Condition_x0020_Data>
+    <Action_x0020_Data>chatbox[\/vt meta load +getvar[navigation]]</Action_x0020_Data>
+    <State>TaskNavLoop</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>Expression</Condition_x0020_Type>
+    <Action_x0020_Type>CallState</Action_x0020_Type>
+    <Condition_x0020_Data>getplayerlandcell[]==cnumber[getvar[LandcellA]]</Condition_x0020_Data>
+    <Action_x0020_Data>Navigation;TaskFlagLoop</Action_x0020_Data>
+    <State>TaskNavLoop</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Expression{getplayerlandcell[]==cnumber[getvar[LandcellB]]}Expression{ceiling[abs[coordinatedistancewithz[getplayercoordinates[],wobjectgetphysicscoordinates[wobjectfindnearestbytemplatetype[getvar[NPC]]]]]]!=0}Expression{ceiling[abs[coordinatedistancewithz[getplayercoordinates[],wobjectgetphysicscoordinates[wobjectfindnearestbytemplatetype[getvar[NPC]]]]]]&lt;=4}SecondsInStateGE{4}</Condition_x0020_Data>
+    <Action_x0020_Data>SetState{TaskFlagLoop}ExpressionAct{actiontryuseitem[wobjectfindnearestbytemplatetype[getvar[NPC]]]}</Action_x0020_Data>
+    <State>TaskFlagLoop</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Expression{getplayerlandcell[]==cnumber[getvar[LandcellB]]}Expression{ceiling[abs[coordinatedistancewithz[getplayercoordinates[],wobjectgetphysicscoordinates[wobjectfindnearestbytemplatetype[getvar[NPC]]]]]]!=0}Expression{ceiling[abs[coordinatedistancewithz[getplayercoordinates[],wobjectgetphysicscoordinates[wobjectfindnearestbytemplatetype[getvar[NPC]]]]]]&lt;=4}Any{ChatMessage: {^(?&lt;NPC&gt;[^\&lt;]*) tells you}ChatMessage: {You may complete}ChatMessage: {You must wait}}}</Condition_x0020_Data>
+    <Action_x0020_Data>SetState{FlagCheck}ExpressionAct{setvar[KillTask\_+getvar[task],1]}</Action_x0020_Data>
+    <State>TaskFlagLoop</State>
+  </table>
+</NewDataSet>
