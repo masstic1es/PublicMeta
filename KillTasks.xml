@@ -29,8 +29,15 @@
   <table>
     <Condition_x0020_Type>All</Condition_x0020_Type>
     <Action_x0020_Type>Multiple</Action_x0020_Type>
-    <Condition_x0020_Data>Expression{istrue[touchvar[killtasks]]}SecondsInStateGE{2}</Condition_x0020_Data>
-    <Action_x0020_Data>ExpressionAct{setvar[meta,KillTasksAlt]}ExpressionAct{setvar[navigation,TownNetwork]}SetState{FlagCheck}</Action_x0020_Data>
+    <Condition_x0020_Data>Expression{getvar[killtasks]==0}SecondsInStateGE{5}</Condition_x0020_Data>
+    <Action_x0020_Data>ExpressionAct{setvar[killtasks, 1]}</Action_x0020_Data>
+    <State>Default</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Expression{getvar[killtasks]==1}</Condition_x0020_Data>
+    <Action_x0020_Data>ExpressionAct{setvar[meta,KillTasks]}ExpressionAct{setvar[navigation,TownNetwork]}SetState{FlagCheck}</Action_x0020_Data>
     <State>Default</State>
   </table>
   <table>
