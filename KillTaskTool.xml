@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="table" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Condition_x0020_Type" type="xs:string" minOccurs="0" />
+                <xs:element name="Action_x0020_Type" type="xs:string" minOccurs="0" />
+                <xs:element name="Condition_x0020_Data" type="xs:string" minOccurs="0" />
+                <xs:element name="Action_x0020_Data" type="xs:string" minOccurs="0" />
+                <xs:element name="State" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Expression{isfalse[getvar[PlayerName]]}</Condition_x0020_Data>
+    <Action_x0020_Data>ExpressionAct{setvar[PlayerName,wobjectgetname[wobjectgetplayer[]]]}CreateView{ToolBar;&lt;?xml version="1.0"?&gt;&lt;view width="200" height="60" title="Kill Task Helper"&gt;&lt;control type="layout"&gt;&lt;control type="button" name="btnTest1" left="20" top="10" width="70" height="40" text="LandcellA" setstate="Landcell" /&gt;&lt;control type="button" name="btnTest2" left="110" top="10" width="70" height="40" text="NPC" setstate="TemplateType"/&gt;&lt;/control&gt;&lt;/view&gt;}</Action_x0020_Data>
+    <State>Default</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>Always</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>0</Condition_x0020_Data>
+    <Action_x0020_Data>ExpressionAct{chatbox[\/t +getvar[PlayerName]+\, setvar\[LandcellA\, \`+getplayerlandcell[]+\`\]]}SetState{Default}</Action_x0020_Data>
+    <State>Landcell</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>Always</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>0</Condition_x0020_Data>
+    <Action_x0020_Data>ExpressionAct{chatbox[\/t +getvar[PlayerName]+\, setvar\[NPC\, +wobjectgettemplatetype[wobjectgetselection[]]+\]]}SetState{Default}</Action_x0020_Data>
+    <State>TemplateType</State>
+  </table>
+</NewDataSet>

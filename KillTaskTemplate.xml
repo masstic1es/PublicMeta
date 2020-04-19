@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="table" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Condition_x0020_Type" type="xs:string" minOccurs="0" />
+                <xs:element name="Action_x0020_Type" type="xs:string" minOccurs="0" />
+                <xs:element name="Condition_x0020_Data" type="xs:string" minOccurs="0" />
+                <xs:element name="Action_x0020_Data" type="xs:string" minOccurs="0" />
+                <xs:element name="State" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <table>
+    <Condition_x0020_Type>Never</Condition_x0020_Type>
+    <Action_x0020_Type>None</Action_x0020_Type>
+    <Condition_x0020_Data>0</Condition_x0020_Data>
+    <Action_x0020_Data>0</Action_x0020_Data>
+    <State>Default</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Any{Expression: {getquestktrequired[GDLeKillCounterFlag]==getquestktrequired[ACEKillCounterFlag]}Expression: {(getquestktprogress[GDLeKillCounterFlag]&gt;=10)||(getquestktprogress[ACEKillCounterFlag]&gt;=10)}}}Expression{(getqueststatus[GDLeKillTaskFlag]==1)&amp;&amp;(getqueststatus[ACEKillTaskFlag]==1)}Expression{isfalse[getvar[KillTask\_MobName]]}Expression{getvar[DisableTask]==0}</Condition_x0020_Data>
+    <Action_x0020_Data>CallState{TaskNav;TaskFlagLoop}ExpressionAct{setvar[town,TownName]}ExpressionAct{setvar[LandcellA,`00000000`]}ExpressionAct{setvar[NPC,12345]}ExpressionAct{setvar[task, MobName]}</Action_x0020_Data>
+    <State>FlagCheck</State>
+  </table>
+  <table>
+    <Condition_x0020_Type>All</Condition_x0020_Type>
+    <Action_x0020_Type>Multiple</Action_x0020_Type>
+    <Condition_x0020_Data>Expression{getplayerlandcell[]==cnumber[getvar[LandcellA]]}Expression{getvar[task]==MobName}</Condition_x0020_Data>
+    <Action_x0020_Data>EmbeddedNavRoute{MobName.nav}ReturnFromCall{0}</Action_x0020_Data>
+    <State>TaskNav</State>
+  </table>
+</NewDataSet>

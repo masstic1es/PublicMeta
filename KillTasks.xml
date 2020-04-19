@@ -43,21 +43,21 @@
   <table>
     <Condition_x0020_Type>All</Condition_x0020_Type>
     <Action_x0020_Type>Multiple</Action_x0020_Type>
-    <Condition_x0020_Data>Any{Expression: {getquestktrequired[bloodshrethkills]==getquestktrequired[bloodshrethkillcount]}Expression: {(getquestktprogress[bloodshrethkillcount]&gt;=10)||(getquestktprogress[bloodshrethkills]&gt;=10)}}}Expression{(getqueststatus[bloodshrethkilltask]==1)&amp;&amp;(getqueststatus[bloodshrethtask]==1)}Expression{isfalse[getvar[KillTask\_BloodShreth]]}</Condition_x0020_Data>
+    <Condition_x0020_Data>Any{Expression: {getquestktrequired[bloodshrethkills]==getquestktrequired[bloodshrethkillcount]}Expression: {(getquestktprogress[bloodshrethkillcount]&gt;=10)||(getquestktprogress[bloodshrethkills]&gt;=10)}}}Expression{(getqueststatus[bloodshrethkilltask]==1)&amp;&amp;(getqueststatus[bloodshrethtask]==1)}Expression{isfalse[getvar[KillTask\_BloodShreth]]}Expression{getvar[DisableTask]==0}</Condition_x0020_Data>
     <Action_x0020_Data>CallState{TaskNav;TaskFlagLoop}ExpressionAct{setvar[town,Shoushi]}ExpressionAct{setvar[LandcellA,`-631963619`]}ExpressionAct{setvar[NPC,31641]}ExpressionAct{setvar[task, BloodShreth]}</Action_x0020_Data>
     <State>FlagCheck</State>
   </table>
   <table>
     <Condition_x0020_Type>All</Condition_x0020_Type>
     <Action_x0020_Type>Multiple</Action_x0020_Type>
-    <Condition_x0020_Data>Any{Expression: {getquestktrequired[diremattekarkills]==getquestktrequired[diremattekarkillcount]}Expression: {(getquestktprogress[diremattekarkills]&gt;=10)||(getquestktprogress[diremattekarkillcount]&gt;=10)}}}Expression{(getqueststatus[diremattekarkilltask]==1)&amp;&amp;(getqueststatus[diremattekartask]==1)}Expression{isfalse[getvar[KillTask\_DireMattekar]]}</Condition_x0020_Data>
+    <Condition_x0020_Data>Any{Expression: {getquestktrequired[diremattekarkills]==getquestktrequired[diremattekarkillcount]}Expression: {(getquestktprogress[diremattekarkills]&gt;=10)||(getquestktprogress[diremattekarkillcount]&gt;=10)}}}Expression{(getqueststatus[diremattekarkilltask]==1)&amp;&amp;(getqueststatus[diremattekartask]==1)}Expression{isfalse[getvar[KillTask\_DireMattekar]]}Expression{getvar[DisableTask]==1}</Condition_x0020_Data>
     <Action_x0020_Data>CallState{TaskNav;TaskFlagLoop}ExpressionAct{setvar[town,Baishi]}ExpressionAct{setvar[LandcellA,`-834600953`]}ExpressionAct{setvar[NPC,31652]}ExpressionAct{setvar[task, DireMattekar]}</Action_x0020_Data>
     <State>FlagCheck</State>
   </table>
   <table>
     <Condition_x0020_Type>All</Condition_x0020_Type>
     <Action_x0020_Type>Multiple</Action_x0020_Type>
-    <Condition_x0020_Data>Any{Expression: {getquestktrequired[platearmoredillokills]==getquestktrequired[platearmoredillokillcount]}Expression: {(getquestktprogress[platearmoredillokills]&gt;=10)||(getquestktprogress[platearmoredillokillcount]&gt;=10)}}}Expression{(getqueststatus[platearmoredillokilltask]==1)&amp;&amp;(getqueststatus[platearmoredillotask]==1)}Expression{isfalse[getvar[KillTask\_PlateArmordillo]]}</Condition_x0020_Data>
+    <Condition_x0020_Data>Any{Expression: {getquestktrequired[platearmoredillokills]==getquestktrequired[platearmoredillokillcount]}Expression: {(getquestktprogress[platearmoredillokills]&gt;=10)||(getquestktprogress[platearmoredillokillcount]&gt;=10)}}}Expression{(getqueststatus[platearmoredillokilltask]==1)&amp;&amp;(getqueststatus[platearmoredillotask]==1)}Expression{isfalse[getvar[KillTask\_PlateArmordillo]]}Expression{getvar[DisableTask]==0}</Condition_x0020_Data>
     <Action_x0020_Data>CallState{TaskNav;TaskFlagLoop}ExpressionAct{setvar[town,FortTethana]}ExpressionAct{setvar[LandcellA,`645988381`]}ExpressionAct{setvar[NPC,31643]}ExpressionAct{setvar[task, PlateArmoredillo]}</Action_x0020_Data>
     <State>FlagCheck</State>
   </table>
