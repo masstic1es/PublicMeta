@@ -1,4 +1,4 @@
-# PublicMeta
+# Public Metas and Modules
 Meta modules I've created to be used by anyone
 <br>
 More info in the [Public Meta Wiki](https://github.com/masstic1es/PublicMeta/wiki)
